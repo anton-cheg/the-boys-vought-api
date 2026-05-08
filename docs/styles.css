@@ -1,0 +1,63 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #0a0a0c;
+  color: #e8e8e8;
+  line-height: 1.5;
+}
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 16px 32px; background: #111114; border-bottom: 1px solid #222;
+}
+.brand { color: #e63946; font-weight: bold; letter-spacing: 0.05em; }
+nav a { color: #ccc; text-decoration: none; }
+nav a:hover { color: #fff; }
+
+.hero {
+  text-align: center;
+  padding: 80px 24px 64px;
+  background:
+    radial-gradient(ellipse at top, #2a0a10 0%, transparent 60%),
+    #0a0a0c;
+}
+.hero h1 {
+  font-size: 56px; margin: 0 0 16px;
+  color: #e63946;
+  text-shadow: 0 2px 0 #000;
+}
+.lede { max-width: 640px; margin: 0 auto 32px; font-size: 18px; color: #bbb; }
+
+.cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #1a1a1f; color: #eee;
+  border: 1px solid #333; border-radius: 4px;
+  text-decoration: none;
+}
+.btn:hover { background: #2a2a30; }
+.btn.primary { background: #e63946; border-color: #e63946; color: white; }
+.btn.primary:hover { background: #c2293a; }
+
+section { max-width: 960px; margin: 0 auto; padding: 48px 24px; }
+section h2 { color: #4cc9f0; }
+
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.feature {
+  background: #131317; border: 1px solid #222; border-radius: 6px;
+  padding: 20px;
+}
+.feature h3 { margin-top: 0; color: #e63946; }
+
+pre {
+  background: #131317; border: 1px solid #222; border-radius: 6px;
+  padding: 16px; overflow-x: auto;
+}
+code { font-family: ui-monospace, "JetBrains Mono", Menlo, monospace; font-size: 13px; color: #f0c674; }
+pre code { color: #e8e8e8; }
+
+footer {
+  text-align: center; padding: 32px; color: #666;
+  border-top: 1px solid #222; font-size: 13px;
+}

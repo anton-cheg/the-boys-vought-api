@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boys vs Supes — Battle Sim</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <span class="brand">VOUGHT<sup>®</sup> Combat Analytics</span>
+    <a href="https://github.com/anton-cheg/the-boys-vought-api" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Boys vs Supes — Battle Sim</h1>
+    <p class="lede">An unofficial, lovingly stupid FastAPI fan project that pits Vought supes against The Boys and rolls dice until somebody&rsquo;s head explodes.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://github.com/anton-cheg/the-boys-vought-api" target="_blank" rel="noopener">View on GitHub</a>
+      <a class="btn" href="#how">How it works</a>
+    </div>
+  </header>
+
+  <section class="features">
+    <div class="feature">
+      <h3>15 characters</h3>
+      <p>Homelander, Stormfront, Soldier Boy, Butcher, Kimiko, MM, Frenchie and friends — each with stats and powers.</p>
+    </div>
+    <div class="feature">
+      <h3>Battle simulator</h3>
+      <p>Pick up to 7 per side, POST to <code>/battle</code>, get a winner, MVP, full round-by-round log.</p>
+    </div>
+    <div class="feature">
+      <h3>FastAPI + React</h3>
+      <p>Typed Pydantic models, OpenAPI docs at <code>/docs</code>, React+Vite frontend talking to the API.</p>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>Try it locally</h2>
+    <pre><code>git clone https://github.com/anton-cheg/the-boys-vought-api
+cd the-boys-vought-api/backend
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+
+# in another terminal
+cd ../frontend
+npm install && npm run dev</code></pre>
+    <p>Then open <code>http://localhost:5173</code> for the arena, or <code>http://localhost:8000/docs</code> for the OpenAPI playground.</p>
+  </section>
+
+  <section>
+    <h2>Sample request</h2>
+    <pre><code>POST /battle
+{
+  "side_a": ["homelander", "stormfront"],
+  "side_b": ["butcher", "kimiko", "soldier-boy"],
+  "seed": 42
+}</code></pre>
+  </section>
+
+  <footer>
+    <p>Unofficial fan project. Not affiliated with Vought International, Amazon Studios, or Sony Pictures Television. Built for fun.</p>
+  </footer>
+</body>
+</html>
