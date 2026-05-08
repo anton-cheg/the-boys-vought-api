@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boys vs Supes — Battle Sim</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="demo.js" defer></script>
 </head>
 <body>
   <nav>
@@ -34,6 +35,22 @@
       <h3>FastAPI + React</h3>
       <p>Typed Pydantic models, OpenAPI docs at <code>/docs</code>, React+Vite frontend talking to the API.</p>
     </div>
+  </section>
+
+  <section id="demo">
+    <h2>Live demo</h2>
+    <p class="muted">Same battle logic as the Python backend, ported to JS so it runs right here in your browser.</p>
+
+    <div id="demo-roster" class="demo-grid"></div>
+
+    <div class="demo-arena">
+      <div>Side A: <span id="count-a">0</span>/7</div>
+      <button id="fight-btn" class="btn primary" disabled>Fight!</button>
+      <button id="reset-btn" class="btn">Reset</button>
+      <div>Side B: <span id="count-b">0</span>/7</div>
+    </div>
+
+    <div id="demo-result"></div>
   </section>
 
   <section id="how">
